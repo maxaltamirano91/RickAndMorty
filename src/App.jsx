@@ -1,4 +1,4 @@
-import "./App.css";
+
 import { useState } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
@@ -6,13 +6,13 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Deatil from "./components/Deatil";
-import Form from "./components/Form";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/Nav/Nav.jsx";
+import About from "./components/About/About.jsx";
+import Deatil from "./components/Deatil/Deatil.jsx";
+import Form from "./components/Form/Form.jsx";
 import store from "./components/redux/store";
-import { Favorites } from "./components/Favorites";
+import { Favorites } from "./components/Favorites/Favorites.jsx";
 
 
 
