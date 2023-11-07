@@ -11,9 +11,10 @@ import Nav from "./components/Nav/Nav.jsx";
 import About from "./components/About/About.jsx";
 import Deatil from "./components/Deatil/Deatil.jsx";
 import Form from "./components/Form/Form.jsx";
-import store from "./components/redux/store";
+import store from "./components/redux/store.js";
 import { Favorites } from "./components/Favorites/Favorites.jsx";
 
+//https://rym2.up.railway.app/api/character/${id}?key=pi-maxaltamirano91
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
 
   function onSearch(id) {
     axios(
-      `https://rym2.up.railway.app/api/character/${id}?key=pi-maxaltamirano91`
+      // `https://rym2.up.railway.app/api/character/${id}?key=pi-maxaltamirano91`
+      `http://localhost:3001/rickandmorty/character/${id}?key=pi-maxaltamirano91`
     ).then(({ data }) => {
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
@@ -42,11 +44,6 @@ function App() {
     });
   }
 
-  // LA FUNCION DE ABAJO TIENE LA MISMA FUNCIONALIDAD DE LA DE ARRIBA.
-
-  // const onClose = (id) => {
-  //    setCharacters(characters.filter(character => character.id !== Number(id)))
-  //  }
 
   const location = useLocation();
 
